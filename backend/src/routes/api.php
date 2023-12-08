@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\controladorProdutos;
+use App\Http\Controllers\ControladorProdutos;
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -10,4 +10,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::resource('produtos', controladorProdutos::class);
+Route::resource('produtos', ControladorProdutos::class);
