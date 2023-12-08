@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        schema::create('produtos', function(){
+        schema::create('categorias', function(){
             $table->id('id');
             $table->string('descricao', 150);
         });
