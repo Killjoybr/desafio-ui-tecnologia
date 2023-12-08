@@ -1,0 +1,20 @@
+{
+  "name": "desafio-ui-tecnologia",
+  "version": "1.0.0",
+  "description": "CRUD de Produto com Angular, TypeScript, Laravel e PostgreSQL",
+  "main": "index.js",
+  "keywords": [
+    "Angular",
+    "TypeScript",
+    "npm",
+    "PHP",
+    "Laravel",
+    "PostgreSQL"
+  ],
+  "author": "Killjoybr",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular/cli": "^17.0.6",
+    "typescript": "^5.3.3"
+  }
+}
