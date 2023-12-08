@@ -14,7 +14,7 @@ return new class extends Migration
         schema::create('produtos', function(){
             $table->id('id');
             $table->string('nome_do_produto', 150);
-            $table->foreignId('categoria_id', );
+            $table->foreignId('categoria_id');
             $table->float('valor_do_produto');
             $table->date('data_de_vencimento');
             $table->integer('quantidade_em_estoque');
