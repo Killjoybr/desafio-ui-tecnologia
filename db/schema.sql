@@ -14,7 +14,7 @@ CREATE TABLE produtos(
     nome_do_produto VARCHAR(150) not null,
     categoria_id integer references categorias(id),
     valor_do_produto float not null,
-    data_de_vencimento date not null,
+    data_de_vencimento date,
     quantidade_em_estoque integer not null,
     produto_perecivel boolean not null default false
 );
