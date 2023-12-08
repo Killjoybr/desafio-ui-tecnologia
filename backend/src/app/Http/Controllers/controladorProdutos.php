@@ -14,12 +14,12 @@ class controladorProdutos extends Controller
 
     public function show($id)
     {
-        return Produto::findOrFail($id);
+        return response()->json(Produto::findOrFail($id));
     }
     
     public function store(Request $request)
     {
-        return Produto::create($request->all());
+        return response()->json(Produto::create($request->all()));
     }
 
     public function update(Request $request, $id)
@@ -27,7 +27,7 @@ class controladorProdutos extends Controller
         $produto = Produto::findOrFail($id);
         $produto->update($request->all());
         
-        return $produto;
+        return response()->json($produto);
     }
 
     public function destroy($id)
