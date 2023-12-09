@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h1>Tabela Produtos</h1>
+  <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Vencimento</th>
+            <th scope="col">Perecível</th>
+            <th scope="col">Estoque</th>
+          </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr *ngFor="let produto of produtos">
+
+        <th scope="row">{{ produto.id  }}</th>
+        <td>{{ produto.nome_do_produto  | uppercase}}</td>
+        <td>{{ produto.valor_do_produto }}</td>
+        <td>{{ produto.data_de_vencimento }}</td>
+        <td>{{ produto.produto_perecivel }}</td>
+        <td>{{ produto.quantidade_em_estoque }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
