@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ProdutoCrudComponent } from './produto-crud/produto-crud.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PerecivelPipe } from './perecivel.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdutoCrudComponent
+    ProdutoCrudComponent,
+    PerecivelPipe
   ],
   imports: [
     BrowserModule,
