@@ -1,7 +1,3 @@
--- No campo valor, utilizar pontos flutuantes pode trazer inconsistência nas operações/transações
--- pesquisei sobre boas práticas e decidi trocar pelo tipo Money, presente no PostgreSQL.
--- Devido ao tipo money não aparecer nas migrations do Laravel, voltei ao tipo float. 
-
 CREATE DATABASE laravel;
 
 CREATE TABLE categorias(
