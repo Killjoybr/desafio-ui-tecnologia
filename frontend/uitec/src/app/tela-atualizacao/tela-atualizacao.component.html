@@ -1,0 +1,49 @@
+<body>
+  <div class="modal-overlay" *ngIf="isVisible">
+    <form (ngSubmit)="onSubmit()">
+      <div class="container mt-4">
+        <button (click)="fecharModal()">Fechar</button>
+
+        <div *ngIf="produto">
+          <label for="id">Id:</label>                    
+          <input type="number" id="id" name="id" [(ngModel)]="id" [value]="produto.id"/>
+        </div>
+
+        <div *ngIf="produto" class="container mt-2">
+          <label for="nome_do_produto">Nome do Produto:</label>
+          <input type="text" id="nome_do_produto" name="nome_do_produto" [(ngModel)]="nome_do_produto"/>
+        </div>
+
+        <div *ngIf="produto" class="container mt-2">
+          <label for="categoria_id">Categoria:</label>
+          <input type="number" id="categoria_id" [(ngModel)]="categoria_id" name="categoria_id"/>
+        </div>
+
+        <div *ngIf="produto" class="container mt-2">
+          <label for="valor_do_produto">Valor:</label>
+          <input type="number" id="valor_do_produto" [(ngModel)]="valor_do_produto" name="valor_do_produto"/>
+        </div>
+
+        <div *ngIf="produto" class="container mt-2">
+          <label for="data_de_vencimento">Data Vencimento:</label>
+          <input type="date" id="data_de_vencimento" [(ngModel)]="data_de_vencimento" name="data_de_vencimento"/>
+        </div>
+
+        <div *ngIf="produto" class="container mt-2">
+          <label for="quantidade_em_estoque">Estoque:</label>
+          <input type="number" id="quantidade_em_estoque" [(ngModel)]="quantidade_em_estoque" name="quantidade_em_estoque"/>
+        </div>
+
+        <div *ngIf="produto" class="container mt-2">
+          <label for="produto_perecivel">Perecível?:</label>
+          <input type="checkbox" id="produto_perecivel" [checked]="produto_perecivel" name="produto_perecivel"/>                
+        </div>
+
+        <div *ngIf="produto" class="container mt-2">
+          <button (click)="onSubmit()">Salvar Alterações</button>    
+        </div>
+      </div>  
+    </form>
+  </div>
+  
+</body>
