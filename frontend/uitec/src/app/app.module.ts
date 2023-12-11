@@ -7,18 +7,22 @@ import { ProdutoCrudComponent } from './produto-crud/produto-crud.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PerecivelPipe } from './perecivel.pipe';
+import { TelaAtualizacaoComponent } from './tela-atualizacao/tela-atualizacao.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoCrudComponent,
-    PerecivelPipe
+    PerecivelPipe,
+    TelaAtualizacaoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
