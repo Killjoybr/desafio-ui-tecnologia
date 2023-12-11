@@ -42,6 +42,7 @@
           <tr>
               <th scope="col">#</th>
               <th scope="col">Nome</th>
+              <th scope="col">Id_Categoria</th>
               <th scope="col">Valor</th>
               <th scope="col">Vencimento</th>
               <th scope="col">Perecível?</th>
@@ -51,20 +52,22 @@
             </tr>
       </thead>
       <tbody>
-        <tr>
           <tr *ngFor="let produto of produtos">
   
           <th scope="row">{{ produto.id  }}</th>
           <td>{{ produto.nome_do_produto }}</td>
+          <td>{{ produto.categoria_id }}</td>
           <td>{{ produto.valor_do_produto }}</td>
           <td>{{ produto.data_de_vencimento }}</td>
           <td>{{ produto.produto_perecivel | perecivel}}</td>
           <td>{{ produto.quantidade_em_estoque }}</td>
-          <!-- <td><button (click)="atualizarProduto(produto.id)">Atualizar</button></td> -->
+          <td><button (click)="abrirModal(produto.id)">Atualizar</button></td>
           <td><button (click)="deletarProduto(produto.id)">Deletar</button></td>
         </tr>
       </tbody>
     </table>
   </div>
-
+  
+  <app-tela-atualizacao [isVisible]="isModalVisible" [produto]="produtoModal"></app-tela-atualizacao>
 </body>
+

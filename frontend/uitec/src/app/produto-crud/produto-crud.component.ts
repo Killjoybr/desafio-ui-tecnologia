@@ -17,12 +17,17 @@ export class ProdutoCrudComponent {
     quantidade_em_estoque:number,
     produto_perecivel:boolean
   }[] = [];
+
   nome_do_produto!:string;
   categoria_id!:number;
   valor_do_produto!:number;
   data_de_vencimento!:Date;
   quantidade_em_estoque!:number;
   produto_perecivel:boolean = false;
+
+  isModalVisible: boolean = false;
+  produtoModal!: any;
+
 
   constructor(private apiService: ApiService) {}
 
@@ -71,8 +76,17 @@ export class ProdutoCrudComponent {
     )
   }
 
-  // atualizarProduto(idProduto:number) {
-  //   this.apiService.atualizarProduto()
-  // }
+// logica do overlay de atualizacao
+
+
+  abrirModal(idProduto: number) {
+    this.isModalVisible = true;
+    
+    this.produtoModal = this.apiService.getProduto(idProduto)
+  }
+
+  fecharModal() {
+    this.isModalVisible = false;
+  }
 }
 
