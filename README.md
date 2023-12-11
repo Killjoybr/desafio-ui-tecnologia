@@ -3,6 +3,7 @@
 - [Pré-Requisitos](#pré-requisitos)
 - [Como-rodar-localmente](#como-rodar-localmente)
 - [CodeShots](#codeshots)
+- [DemoShots](#demo)
 - [Conclusão](#conclusão)
 
 ## Introdução
@@ -120,6 +121,14 @@ Pronto você está acessando o projeto!
 ![pipeAngular](./assets/pipe.png)
 ![html](./assets/html.png)
 ![typesAngular](./assets/types.png)
+
+## Demo
+**Tela Cadastro**
+![TelaCadastro](./assets/telaAppCadastro.png)
+
+**Tela Tabelas**
+![TelaTabelas](./assets/telaTabelaProdutos.png)
+
 ## Conclusão
 
 Este projeto foi meu primeiro contato com os frameworks: Laravel & Angular.
