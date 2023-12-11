@@ -17,6 +17,10 @@ export class ApiService {
     return this.http.get(`${this.apiUrl}/produtos`)
   }
 
+  getProduto(id:number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/produtos/${id}`)
+  }
+
   cadastrarProduto(dadosProduto:{nome_do_produto:string,categoria_id:number,valor_do_produto:number,data_de_vencimento:Date,quantidade_em_estoque:number,produto_perecivel:boolean}): Observable<any> {
     return this.http.post(`${this.apiUrl}/produtos`, dadosProduto)
   }
